@@ -1,0 +1,34 @@
+<html>
+
+<head>
+
+	<script type="text/javascript">
+
+		function moveleft()
+		{
+		document.getElementById('image').style.position="absolute";
+		document.getElementById('image').style.left="500px";
+		}
+		function moveback()
+		{
+		document.getElementById('image').style.position="absolute";
+		document.getElementById('image').style.left="0px";
+
+
+		}
+
+
+	</script>
+
+</head>
+
+
+<body>
+
+	<img id="image" src="images/dragon.jpg"
+	onmouseover="moveleft()"
+	onmouseout="moveback()"/>
+
+
+</body>
+</html>

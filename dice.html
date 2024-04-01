@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="style/dice.css" rel="stylesheet" type="text/css">
+	<title>Dice</title>
+
+	<script type="text/javascript">
+		window.onload = function() {
+			//Diceroll function
+			function diceRoll(min, max) {
+				var min = Math.floor(min);
+				var max = Math.ceil(max);
+				var roll = Math.floor(Math.random() * (max - min + 1)) + min;
+				document.getElementById("answer").innerHTML = roll;
+				console.log(roll);
+			};
+			//d4
+			document.getElementById("d4").onclick = function() {
+				diceRoll(1, 4);
+			};
+			//d6 
+			document.getElementById("d6").onclick = function() {
+				diceRoll(1, 6);
+			};
+			//d8
+			document.getElementById("d8").onclick = function() {
+				diceRoll(1, 8);
+			};
+			//d10
+			document.getElementById("d10").onclick = function() {
+				diceRoll(1, 10);
+			};
+			//d12
+			document.getElementById("d12").onclick = function() {
+				diceRoll(1, 12);
+			};
+			//d20
+			document.getElementById("d20").onclick = function() {
+				diceRoll(1, 20);
+			};
+		}
+
+	</script>
+
+
+</head>
+<body>
+
+	<img src="images/logo.png" alt="Logo Placeholder" class="logo">
+
+	<p id="top">Dungeons & Dragons ~ <a href="menu.html">Menu</a> -> Dice</p>
+
+	<div class="nav">
+  		<input type="text" placeholder="Search..">
+	</div>
+
+	<a href="home.html"><img src="images/menu_img.png" alt="Menu Image" class="menu"></a>
+
+	<p class="msg">Practice rolling dice!</p>
+
+	<div class="dice">
+		<div id="die">
+			<img src="images/dice/d4.png" class="die">
+			<img src="images/dice/d6.png" class="die">
+			<img src="images/dice/d8.png" class="die">
+			<img src="images/dice/d10.jpg" class="die">
+			<img src="images/dice/d12.jpg" class="die">
+			<img src="images/dice/d20.jpg" class="die">
+			<br>
+			<button id="d4">D4</button>
+			<button id="d6">D6</button>
+			<button id="d8">D8</button>
+			<button id="d10">D10</button>
+			<button id="d12">D12</button>
+			<button id="d20">D20</button>
+
+		</div>
+		<br>
+		<p id="drumRoll">You've rolled a...</p>
+		<br>
+		<div id="answer"></div>
+	</div>
+
+</body>
+</html>

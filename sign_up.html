@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="style/sign_up.css" rel="stylesheet" type="text/css">
+	<title>Sign Up Page</title>
+</head>
+<body>
+
+	<img src="images/logo.png" alt="Logo Placeholder" class="logo">
+
+	<p id="top">Dungeons & Dragons ~ <a href="menu.html" style="color:white">Menu</a> -> Sign Up</p>
+
+	<div class="nav">
+  		<input type="text" placeholder="Search..">
+	</div>
+
+	<a href="home.html"><img src="images/menu_img.png" alt="Menu Image" class="menu"></a>
+
+	<div class="h-100">
+		
+		<form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+								
+			<label class="mb-2 text-muted" for="name">Name</label>
+			<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+			<div class="invalid">
+				Name is required	
+			</div>
+		
+			<label class="mb-2 text-muted" for="email">E-Mail Address</label>
+			<input id="email" type="email" class="form-control" name="email" value="" required>
+			<div class="invalid">
+				Email is invalid
+			</div>
+											
+			<label class="mb-2 text-muted" for="password">Password</label>
+			<input id="password" type="password" class="form-control" name="password" required>
+			<div class="invalid">
+				Password is required
+			</div>
+
+			<p class="form-text text-muted mb-3">
+				By registering you agree with our terms and condition.
+			</p>
+
+								
+			<button type="submit" class="btn btn-primary ms-auto">
+				Register	
+			</button>
+							
+		</form>
+						
+		<p>Already have an account? <a href="login.html" class="text-dark">Login</a></p>
+							
+	</div>
+
+	<script src="login.js"></script>
+
+</body>
+</html>
